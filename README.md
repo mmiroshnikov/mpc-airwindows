@@ -4,13 +4,31 @@
 
 ![All plugins](docs/screenshots/all.jpg)
 
+- Air3
+- ButterComp2
+- Chamber2
+- ChorusEnsemble
+- Console7Channel
+- Density2
+- Galactic
+- Galactic2
+- Galactic3
+- GalacticVibe
+- Infinity2
+- MatrixVerb
+- PitchDelay
+- TapeDelay2
+- ToVinyl4
+- Verbity2
+- ZAcidLowpass
+- ZLowpass2
+- kAlienSpaceship
+- kCathedral5
+- kCosmos
+
 [Airwindows](https://www.airwindows.com/) effects as native insert-effect plugins for Akai MPC OS / Force
 (MPC Live, MPC One, MPC X, Force; armv7), each with its own touch skin: a cosmic backdrop, the controls on a dark
 see-through panel, and the current Q-Link bank outlined.
-
-Air3, ButterComp2, Chamber2, ChorusEnsemble, Console7Channel, Density2, Galactic, Galactic2, Galactic3, GalacticVibe,
-Infinity2, MatrixVerb, PitchDelay, TapeDelay2, ToVinyl4, Verbity2, ZAcidLowpass, ZLowpass2, kAlienSpaceship,
-kCathedral5, kCosmos.
 
 ## Install on a device
 
