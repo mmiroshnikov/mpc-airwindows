@@ -1,0 +1,37 @@
+{
+ "name": "Verbity2",
+ "params": [
+  {
+   "key": "p0",
+   "name": "RmSize",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 50.0
+  },
+  {
+   "key": "p1",
+   "name": "Sustain",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 50.0
+  },
+  {
+   "key": "p2",
+   "name": "Mulch",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 50.0
+  },
+  {
+   "key": "p3",
+   "name": "Wetness",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 100.0
+  }
+ ]
+}

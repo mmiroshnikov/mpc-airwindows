@@ -1,0 +1,32 @@
+{
+ "name": "Console7Channel",
+ "vendor": "Airwindows",
+ "uid": "AwmS",
+ "version": 1000,
+ "so": "console7channel.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/Console7Channel/Console7Channel.cpp",
+   "src/airwindows/Console7Channel/Console7ChannelProc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/Console7Channel",
+   "-DAW_CLASS=Console7Channel",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/Console7Channel/Console7Channel.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

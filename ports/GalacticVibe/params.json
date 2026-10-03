@@ -1,0 +1,21 @@
+{
+ "name": "GalacticVibe",
+ "params": [
+  {
+   "key": "p0",
+   "name": "Drift",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 0.0
+  },
+  {
+   "key": "p1",
+   "name": "Dry/Wet",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 100.0
+  }
+ ]
+}

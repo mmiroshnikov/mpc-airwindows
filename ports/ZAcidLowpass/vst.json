@@ -1,0 +1,32 @@
+{
+ "name": "ZAcidLowpass",
+ "vendor": "Airwindows",
+ "uid": "Awrm",
+ "version": 1000,
+ "so": "zacidlowpass.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/ZAcidLowpass/ZAcidLowpass.cpp",
+   "src/airwindows/ZAcidLowpass/ZAcidLowpassProc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/ZAcidLowpass",
+   "-DAW_CLASS=ZAcidLowpass",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/ZAcidLowpass/ZAcidLowpass.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

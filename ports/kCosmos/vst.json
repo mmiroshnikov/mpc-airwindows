@@ -1,0 +1,32 @@
+{
+ "name": "kCosmos",
+ "vendor": "Airwindows",
+ "uid": "Aww9",
+ "version": 1000,
+ "so": "kcosmos.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/kCosmos/kCosmos.cpp",
+   "src/airwindows/kCosmos/kCosmosProc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/kCosmos",
+   "-DAW_CLASS=kCosmos",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/kCosmos/kCosmos.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

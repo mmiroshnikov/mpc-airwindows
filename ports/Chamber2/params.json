@@ -1,0 +1,37 @@
+{
+ "name": "Chamber2",
+ "params": [
+  {
+   "key": "p0",
+   "name": "Delay",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 34.0
+  },
+  {
+   "key": "p1",
+   "name": "Regen",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 31.0
+  },
+  {
+   "key": "p2",
+   "name": "Thick",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 28.0
+  },
+  {
+   "key": "p3",
+   "name": "Wet",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 25.0
+  }
+ ]
+}

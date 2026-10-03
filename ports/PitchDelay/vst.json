@@ -1,0 +1,32 @@
+{
+ "name": "PitchDelay",
+ "vendor": "Airwindows",
+ "uid": "AwUM",
+ "version": 1000,
+ "so": "pitchdelay.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/PitchDelay/PitchDelay.cpp",
+   "src/airwindows/PitchDelay/PitchDelayProc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/PitchDelay",
+   "-DAW_CLASS=PitchDelay",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/PitchDelay/PitchDelay.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

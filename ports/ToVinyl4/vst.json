@@ -1,0 +1,32 @@
+{
+ "name": "ToVinyl4",
+ "vendor": "Airwindows",
+ "uid": "Aw6C",
+ "version": 1000,
+ "so": "tovinyl4.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/ToVinyl4/ToVinyl4.cpp",
+   "src/airwindows/ToVinyl4/ToVinyl4Proc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/ToVinyl4",
+   "-DAW_CLASS=ToVinyl4",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/ToVinyl4/ToVinyl4.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

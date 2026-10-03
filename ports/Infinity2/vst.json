@@ -1,0 +1,32 @@
+{
+ "name": "Infinity2",
+ "vendor": "Airwindows",
+ "uid": "AwAn",
+ "version": 1000,
+ "so": "infinity2.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/Infinity2/Infinity2.cpp",
+   "src/airwindows/Infinity2/Infinity2Proc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/Infinity2",
+   "-DAW_CLASS=Infinity2",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/Infinity2/Infinity2.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

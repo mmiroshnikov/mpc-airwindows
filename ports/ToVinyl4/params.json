@@ -1,0 +1,37 @@
+{
+ "name": "ToVinyl4",
+ "params": [
+  {
+   "key": "p0",
+   "name": "Mid HiP",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 20.3419
+  },
+  {
+   "key": "p1",
+   "name": "SideHiP",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 34.2405
+  },
+  {
+   "key": "p2",
+   "name": "H Limit",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 32.0
+  },
+  {
+   "key": "p3",
+   "name": "Gv Wear",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 6.4
+  }
+ ]
+}

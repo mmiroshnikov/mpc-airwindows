@@ -1,0 +1,53 @@
+{
+ "name": "TapeDelay2",
+ "params": [
+  {
+   "key": "p0",
+   "name": "Time",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 100.0
+  },
+  {
+   "key": "p1",
+   "name": "Regen",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 0.0
+  },
+  {
+   "key": "p2",
+   "name": "Freq",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 50.0
+  },
+  {
+   "key": "p3",
+   "name": "Reso",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 0.0
+  },
+  {
+   "key": "p4",
+   "name": "Flutter",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 0.0
+  },
+  {
+   "key": "p5",
+   "name": "Dry/Wet",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 100.0
+  }
+ ]
+}

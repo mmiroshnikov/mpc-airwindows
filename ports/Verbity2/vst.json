@@ -1,0 +1,32 @@
+{
+ "name": "Verbity2",
+ "vendor": "Airwindows",
+ "uid": "AwNU",
+ "version": 1000,
+ "so": "verbity2.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/Verbity2/Verbity2.cpp",
+   "src/airwindows/Verbity2/Verbity2Proc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/Verbity2",
+   "-DAW_CLASS=Verbity2",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/Verbity2/Verbity2.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

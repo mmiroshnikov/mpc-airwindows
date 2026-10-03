@@ -1,0 +1,21 @@
+{
+ "name": "Air3",
+ "params": [
+  {
+   "key": "p0",
+   "name": "Air",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 50.0
+  },
+  {
+   "key": "p1",
+   "name": "Gnd",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 50.0
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "name": "Air3",
+ "vendor": "Airwindows",
+ "uid": "Aw9m",
+ "version": 1000,
+ "so": "air3.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/Air3/Air3.cpp",
+   "src/airwindows/Air3/Air3Proc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/Air3",
+   "-DAW_CLASS=Air3",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/Air3/Air3.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

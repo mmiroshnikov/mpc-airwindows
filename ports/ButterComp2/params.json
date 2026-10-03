@@ -1,0 +1,29 @@
+{
+ "name": "ButterComp2",
+ "params": [
+  {
+   "key": "p0",
+   "name": "Compress",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 0.0
+  },
+  {
+   "key": "p1",
+   "name": "Output",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 50.0
+  },
+  {
+   "key": "p2",
+   "name": "Dry/Wet",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 100.0
+  }
+ ]
+}

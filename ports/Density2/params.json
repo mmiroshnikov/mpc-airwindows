@@ -1,0 +1,37 @@
+{
+ "name": "Density2",
+ "params": [
+  {
+   "key": "p0",
+   "name": "Density",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 20.0
+  },
+  {
+   "key": "p1",
+   "name": "Highpass",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 0.0
+  },
+  {
+   "key": "p2",
+   "name": "Output",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 100.0
+  },
+  {
+   "key": "p3",
+   "name": "Dry/Wet",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 100.0
+  }
+ ]
+}

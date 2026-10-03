@@ -1,0 +1,32 @@
+{
+ "name": "TapeDelay2",
+ "vendor": "Airwindows",
+ "uid": "Aw7Z",
+ "version": 1000,
+ "so": "tapedelay2.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/TapeDelay2/TapeDelay2.cpp",
+   "src/airwindows/TapeDelay2/TapeDelay2Proc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/TapeDelay2",
+   "-DAW_CLASS=TapeDelay2",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/TapeDelay2/TapeDelay2.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

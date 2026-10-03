@@ -1,0 +1,13 @@
+{
+ "name": "Console7Channel",
+ "params": [
+  {
+   "key": "p0",
+   "name": "Fader",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 77.2
+  }
+ ]
+}

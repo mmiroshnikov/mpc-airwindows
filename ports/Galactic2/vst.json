@@ -1,0 +1,32 @@
+{
+ "name": "Galactic2",
+ "vendor": "Airwindows",
+ "uid": "Awki",
+ "version": 1000,
+ "so": "galactic2.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/Galactic2/Galactic2.cpp",
+   "src/airwindows/Galactic2/Galactic2Proc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/Galactic2",
+   "-DAW_CLASS=Galactic2",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/Galactic2/Galactic2.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

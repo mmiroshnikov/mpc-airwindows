@@ -1,0 +1,32 @@
+{
+ "name": "Density2",
+ "vendor": "Airwindows",
+ "uid": "AwXn",
+ "version": 1000,
+ "so": "density2.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/Density2/Density2.cpp",
+   "src/airwindows/Density2/Density2Proc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/Density2",
+   "-DAW_CLASS=Density2",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/Density2/Density2.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

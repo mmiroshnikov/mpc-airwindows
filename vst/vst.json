@@ -1,0 +1,16 @@
+{
+  "name": "Galactic",
+  "vendor": "Airwindows",
+  "uid": "AwGl",
+  "version": 1000,
+  "so": "galactic.so",
+  "params": "params.json",
+  "effect": true,
+  "skin_theme": ["label_scale=1.5", "backdrop=build/backdrop.png"],
+  "build": {
+    "root": "..",
+    "sources": ["src/engine.cpp", "src/airwindows/Galactic/Galactic.cpp", "src/airwindows/Galactic/GalacticProc.cpp"],
+    "cflags": ["-Isrc/shim", "-Isrc/airwindows/Galactic", "-Wno-unused-value", "-Wno-unused-variable"],
+    "libs": ["-lm"]
+  }
+}

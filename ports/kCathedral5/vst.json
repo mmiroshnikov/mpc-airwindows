@@ -1,0 +1,32 @@
+{
+ "name": "kCathedral5",
+ "vendor": "Airwindows",
+ "uid": "AwUF",
+ "version": 1000,
+ "so": "kcathedral5.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/kCathedral5/kCathedral5.cpp",
+   "src/airwindows/kCathedral5/kCathedral5Proc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/kCathedral5",
+   "-DAW_CLASS=kCathedral5",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/kCathedral5/kCathedral5.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

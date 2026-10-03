@@ -1,0 +1,32 @@
+{
+ "name": "ButterComp2",
+ "vendor": "Airwindows",
+ "uid": "AwUv",
+ "version": 1000,
+ "so": "buttercomp2.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/ButterComp2/ButterComp2.cpp",
+   "src/airwindows/ButterComp2/ButterComp2Proc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/ButterComp2",
+   "-DAW_CLASS=ButterComp2",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/ButterComp2/ButterComp2.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

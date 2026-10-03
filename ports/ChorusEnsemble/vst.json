@@ -1,0 +1,32 @@
+{
+ "name": "ChorusEnsemble",
+ "vendor": "Airwindows",
+ "uid": "AwyP",
+ "version": 1000,
+ "so": "chorusensemble.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/ChorusEnsemble/ChorusEnsemble.cpp",
+   "src/airwindows/ChorusEnsemble/ChorusEnsembleProc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/ChorusEnsemble",
+   "-DAW_CLASS=ChorusEnsemble",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/ChorusEnsemble/ChorusEnsemble.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

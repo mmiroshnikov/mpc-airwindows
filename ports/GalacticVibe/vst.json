@@ -1,0 +1,32 @@
+{
+ "name": "GalacticVibe",
+ "vendor": "Airwindows",
+ "uid": "Aw5u",
+ "version": 1000,
+ "so": "galacticvibe.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/GalacticVibe/GalacticVibe.cpp",
+   "src/airwindows/GalacticVibe/GalacticVibeProc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/GalacticVibe",
+   "-DAW_CLASS=GalacticVibe",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/GalacticVibe/GalacticVibe.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "name": "kAlienSpaceship",
+ "vendor": "Airwindows",
+ "uid": "AwF8",
+ "version": 1000,
+ "so": "kalienspaceship.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/kAlienSpaceship/kAlienSpaceship.cpp",
+   "src/airwindows/kAlienSpaceship/kAlienSpaceshipProc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/kAlienSpaceship",
+   "-DAW_CLASS=kAlienSpaceship",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/kAlienSpaceship/kAlienSpaceship.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

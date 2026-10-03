@@ -1,0 +1,32 @@
+{
+ "name": "ZLowpass2",
+ "vendor": "Airwindows",
+ "uid": "Awk7",
+ "version": 1000,
+ "so": "zlowpass2.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/ZLowpass2/ZLowpass2.cpp",
+   "src/airwindows/ZLowpass2/ZLowpass2Proc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/ZLowpass2",
+   "-DAW_CLASS=ZLowpass2",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/ZLowpass2/ZLowpass2.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

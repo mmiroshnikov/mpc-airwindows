@@ -1,0 +1,37 @@
+{
+ "name": "ZLowpass2",
+ "params": [
+  {
+   "key": "p0",
+   "name": "Input",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 10.0
+  },
+  {
+   "key": "p1",
+   "name": "Freq",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 50.0
+  },
+  {
+   "key": "p2",
+   "name": "Output",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 100.0
+  },
+  {
+   "key": "p3",
+   "name": "Poles",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 50.0
+  }
+ ]
+}

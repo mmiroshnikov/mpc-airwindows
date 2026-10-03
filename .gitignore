@@ -1,0 +1,8 @@
+.DS_Store
+build/
+dist/
+**/tests/out/
+*.o
+*.so
+__pycache__/
+*.pyc

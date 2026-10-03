@@ -1,0 +1,32 @@
+{
+ "name": "Galactic3",
+ "vendor": "Airwindows",
+ "uid": "AwYn",
+ "version": 1000,
+ "so": "galactic3.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/Galactic3/Galactic3.cpp",
+   "src/airwindows/Galactic3/Galactic3Proc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/Galactic3",
+   "-DAW_CLASS=Galactic3",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/Galactic3/Galactic3.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

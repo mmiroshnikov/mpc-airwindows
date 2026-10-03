@@ -1,0 +1,32 @@
+{
+ "name": "MatrixVerb",
+ "vendor": "Airwindows",
+ "uid": "Aw8k",
+ "version": 1000,
+ "so": "matrixverb.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/MatrixVerb/MatrixVerb.cpp",
+   "src/airwindows/MatrixVerb/MatrixVerbProc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/MatrixVerb",
+   "-DAW_CLASS=MatrixVerb",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/MatrixVerb/MatrixVerb.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}

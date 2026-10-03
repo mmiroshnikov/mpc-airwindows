@@ -1,0 +1,10 @@
+{
+  "name": "Galactic",
+  "params": [
+    {"key": "replace", "name": "Replace", "min": 0, "max": 100, "unit": "%", "default": 50},
+    {"key": "brightness", "name": "Brightness", "min": 0, "max": 100, "unit": "%", "default": 50},
+    {"key": "detune", "name": "Detune", "min": 0, "max": 100, "unit": "%", "default": 50},
+    {"key": "bigness", "name": "Bigness", "min": 0, "max": 100, "unit": "%", "default": 100},
+    {"key": "drywet", "name": "Dry/Wet", "min": 0, "max": 100, "unit": "%", "default": 30}
+  ]
+}

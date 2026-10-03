@@ -1,0 +1,32 @@
+{
+ "name": "Chamber2",
+ "vendor": "Airwindows",
+ "uid": "AwVx",
+ "version": 1000,
+ "so": "chamber2.so",
+ "params": "params.json",
+ "effect": true,
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/Chamber2/Chamber2.cpp",
+   "src/airwindows/Chamber2/Chamber2Proc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/Chamber2",
+   "-DAW_CLASS=Chamber2",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/Chamber2/Chamber2.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ },
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ]
+}
