@@ -92,12 +92,18 @@ if [ $YES = 0 ]; then
     read -r ok; case "$ok" in y|Y|yes) ;; *) echo "cancelled"; exit 1 ;; esac
 fi
 
+# MPC's service is acvs on stock firmware, inmusic-mpc on Hakai-enabled systems; use whichever exists (acvs if neither is found).
+mpc_service() {
+    if systemctl cat acvs >/dev/null 2>&1; then echo acvs
+    elif systemctl cat inmusic-mpc >/dev/null 2>&1; then echo inmusic-mpc
+    else echo acvs; fi
+}
 mpc_ctl() {   # stop | start; a test run logs the call to $MPC_TEST_LOG instead of touching MPC
     if [ -n "$MPC_INSTALL_TEST" ]; then [ -z "$MPC_TEST_LOG" ] || echo "$1" >> "$MPC_TEST_LOG"; return 0; fi
-    systemctl "$1" acvs
+    systemctl "$1" "$(mpc_service)"
 }
 if [ $DEFER = 1 ]; then
-    [ -n "$MPC_INSTALL_TEST" ] || ! pidof MPC >/dev/null || die "MPC is running: with -n stop it first (systemctl stop acvs)"
+    [ -n "$MPC_INSTALL_TEST" ] || ! pidof MPC >/dev/null || die "MPC is running: with -n stop it first (stop the MPC service first, see INSTALL.md)"
 else
     mpc_ctl stop
     trap 'mpc_ctl start; rm -rf "$W"' EXIT

@@ -47,7 +47,7 @@ mkdir -p "$HERE/dist"
 for n in "${names[@]}"; do
   P="$HERE/ports/$n/build"; so="$(echo "$n" | tr 'A-Z' 'a-z').so"
   python3 "$MV/tools/release.py" --so "$P/$so" --skin "$P/skin/Airwindows - VST - $n" --entry "$P/pluginlist-entry.xml" \
-      --version $VERSION --id "airwindows-$(echo "$n" | tr 'A-Z' 'a-z')" --license MIT \
+      --version $VERSION --id "airwindows-$(echo "$n" | tr 'A-Z' 'a-z')" --license MIT --repo mmiroshnikov/mpc-airwindows \
       --about "Airwindows $n (MIT), as an MPC insert effect." -o "$HERE/dist" >/dev/null
   echo "packed dist/$n-$VERSION-mpc-armv7.zip"
 done

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Build the MPC OS plugin: skin (on this computer) + armhf .so (Debian bullseye cross compiler in Docker).
 #   ./build.sh
-# Output: vst/build/skin/Airwindows - VST - Galactic/ with galactic.so inside, ready to copy to /sdcard/Synths.
+# Output: vst/build/skin/Airwindows - VST - Galactic/ (galactic.so inside) and dist/Galactic-1.0.0-mpc-armv7.zip.
 # libstdc++ is linked statically, so the .so needs only glibc (<= 2.31 here; the device has 2.39).
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
@@ -35,3 +35,8 @@ docker run --rm -v "$HERE":/b -v "$MV":/mv:ro -w /b "$IMAGE" bash -euc '
 '
 cp "$B/galactic.so" "$SKIN/galactic.so"
 md5 -q "$SKIN/galactic.so" 2>/dev/null || md5sum "$SKIN/galactic.so"
+mkdir -p "$HERE/dist"
+python3 "$MV/tools/release.py" --so "$B/galactic.so" --skin "$SKIN" --entry "$B/pluginlist-entry.xml" \
+    --version 1.0.0 --id airwindows-galactic --license MIT --repo mmiroshnikov/mpc-airwindows \
+    --about "Airwindows Galactic (MIT), as an MPC insert effect." -o "$HERE/dist" >/dev/null
+echo "packed dist/Galactic-1.0.0-mpc-armv7.zip"
