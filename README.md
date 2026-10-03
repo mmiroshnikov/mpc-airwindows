@@ -1,5 +1,9 @@
 # Airwindows for MPC OS
 
+![kAlienSpaceship on MPC](docs/screenshots/kAlienSpaceship.jpg)
+
+![All plugins](docs/screenshots/all.jpg)
+
 [Airwindows](https://www.airwindows.com/) effects as native insert-effect plugins for Akai MPC OS / Force
 (MPC Live, MPC One, MPC X, Force; armv7), each with its own touch skin: a cosmic backdrop, the controls on a dark
 see-through panel, and the current Q-Link bank outlined.
@@ -27,6 +31,7 @@ Needs Docker, a C compiler and Python 3 with Pillow and numpy.
 ./build_aw.sh kCosmos Air3    # just these
 ./build.sh                    # Galactic (vst/) -> vst/build/skin/
 tests/run_aw.sh [Name ...]    # offline render test under ASan (run on Linux, e.g. in node:19-bullseye)
+python3 tools/screenshots.py  # docs/screenshots/: each skin rendered with its controls at the defaults
 ```
 
 `build_aw.sh` draws each skin on this computer (backdrop from `tools/aw_backdrop.py`, layout and filmstrips from
@@ -43,7 +48,7 @@ and packs the release zip.
 
 - `src/` — the Airwindows sources (`src/airwindows/`, MIT) and the engine glue (`aw_engine.cpp`, `shim/`).
 - `ports/<Name>/` — per-plugin `vst.json` (uid, .so name, skin theme) and `params.json`.
-- `tools/` — `aw_port.py` (port generator), `aw_backdrop.py` (skin backdrops).
+- `tools/` — `aw_port.py` (port generator), `aw_backdrop.py` (skin backdrops), `screenshots.py` (README images).
 - `mpc-vst/` — the parts of the mpc-vst-plugins toolchain this repo builds with: the VST2 wrapper, skin generator
   (`gen_vst.py`, `shadow_skin.py`, `shadow_art.c`) and release packager.
 

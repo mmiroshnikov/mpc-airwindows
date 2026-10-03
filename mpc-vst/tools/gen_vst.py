@@ -184,6 +184,8 @@ def main():
     else:
         import studio
         ps, sections = studio.load_params(os.path.join(here, src))
+        for p in ps:
+            p["name"] = short(p.get("name", p["key"]), cfg.get("short_names", {}))
         layout = os.path.join(build, "layout.auto.conf")
         theme = [l.split("=", 1)[0] + "=" + os.path.join(here, l.split("=", 1)[1]) if l.startswith("backdrop=") else l
                  for l in cfg.get("skin_theme", [])]

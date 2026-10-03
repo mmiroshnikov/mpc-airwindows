@@ -92,7 +92,7 @@ ROW_H = 304
 def auto_layout(params, sections, title=None):
     """Sections -> titled frames; rows of 8 slots (= a Q-Link bank); 2 rows per tab."""
     byk = {p["key"]: p for p in params}
-    if title and len(sections) > 1 and all(len(ks) == 1 for _, ks in sections):
+    if title and sections and all(len(ks) == 1 for _, ks in sections):
         sections = [(title, [ks[0] for _, ks in sections])]   # ungrouped keys (p0, p1, ...): one frame named after the plugin
     items = []   # (section label, key, slots): steppers/readouts take 2 slots
     for label, ks in sections:

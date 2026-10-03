@@ -5,6 +5,7 @@
   "version": 1000,
   "so": "galactic.so",
   "params": "params.json",
+  "short_names": {"Brightness": "Bright"},
   "effect": true,
   "skin_theme": ["label_scale=1.5", "backdrop=build/backdrop.png"],
   "build": {
