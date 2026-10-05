@@ -4,7 +4,7 @@
     python3 tools/screenshots.py [Name ...]      default: every ports/*/ plus Galactic
 
 Builds each skin the way build_aw.sh does (backdrop + gen_vst.py; no Docker, no .so), then composites
-docs/screenshots/<Name>.png and docs/screenshots/all.png (a contact sheet). Needs Pillow and numpy.
+docs/screenshots/<Name>.jpg and docs/screenshots/all.jpg (a contact sheet). Needs Pillow and numpy.
 """
 import json
 import os
@@ -88,7 +88,7 @@ def main():
         params = json.load(open(os.path.join(port_dir(n), "params.json")))
         params = params["params"] if isinstance(params, dict) else params
         im = render(skin, params)
-        im.save(os.path.join(OUT, n + ".png"), optimize=True)
+        im.save(os.path.join(OUT, n + ".jpg"), quality=85, optimize=True)
         shots.append(im)
         print(n)
     if len(names) > 1:
@@ -99,7 +99,7 @@ def main():
         sheet = Image.new("RGB", (cols * tw + (cols + 1) * gap, rows * th + (rows + 1) * gap), (0, 0, 0))
         for i, im in enumerate(shots):
             sheet.paste(im.resize((tw, th), Image.LANCZOS), (gap + (i % cols) * (tw + gap), gap + (i // cols) * (th + gap)))
-        sheet.save(os.path.join(OUT, "all.png"), optimize=True)
+        sheet.save(os.path.join(OUT, "all.jpg"), quality=88, optimize=True)
 
 
 if __name__ == "__main__":

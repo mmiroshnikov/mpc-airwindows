@@ -1,0 +1,32 @@
+{
+ "name": "Mackity",
+ "vendor": "Airwindows",
+ "uid": "AwMk",
+ "version": 1000,
+ "so": "mackity.so",
+ "params": "params.json",
+ "effect": true,
+ "skin_theme": [
+  "label_scale=1.5",
+  "backdrop=build/backdrop.png"
+ ],
+ "build": {
+  "root": "../..",
+  "sources": [
+   "src/aw_engine.cpp",
+   "src/airwindows/Mackity/Mackity.cpp",
+   "src/airwindows/Mackity/MackityProc.cpp"
+  ],
+  "cflags": [
+   "-Isrc/shim",
+   "-Isrc/airwindows/Mackity",
+   "-DAW_CLASS=Mackity",
+   "-fwrapv",
+   "-include",
+   "src/airwindows/Mackity/Mackity.h"
+  ],
+  "libs": [
+   "-lm"
+  ]
+ }
+}

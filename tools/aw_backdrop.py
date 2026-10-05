@@ -42,7 +42,7 @@ PICK = {
     "MatrixVerb": "emerald", "Verbity2": "rose", "Chamber2": "amber", "PitchDelay": "crimson",
     "TapeDelay2": "amber", "ChorusEnsemble": "aurora", "Air3": "teal", "ButterComp2": "gold",
     "Console7Channel": "steel", "Density2": "crimson", "ToVinyl4": "rose", "ZAcidLowpass": "emerald",
-    "ZLowpass2": "cobalt",
+    "ZLowpass2": "cobalt", "Mackity": "magenta",
 }
 WIREFRAME = {"kAlienSpaceship": "tunnel", "kCosmos": "sphere", "Galactic": "sphere", "Galactic2": "tunnel",
              "Galactic3": "grid", "GalacticVibe": "sphere", "Infinity2": "tunnel", "ZAcidLowpass": "grid"}

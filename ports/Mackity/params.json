@@ -1,0 +1,21 @@
+{
+ "name": "Mackity",
+ "params": [
+  {
+   "key": "p0",
+   "name": "In Trim",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 10.0
+  },
+  {
+   "key": "p1",
+   "name": "Out Pad",
+   "min": 0,
+   "max": 100,
+   "unit": "%",
+   "default": 100.0
+  }
+ ]
+}

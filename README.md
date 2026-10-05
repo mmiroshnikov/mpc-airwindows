@@ -15,6 +15,7 @@
 - Galactic3
 - GalacticVibe
 - Infinity2
+- Mackity
 - MatrixVerb
 - PitchDelay
 - TapeDelay2
